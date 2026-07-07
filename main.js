@@ -30,7 +30,7 @@ document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
 // MULTI-STEP INTAKE FORM
 // =============================================
 
-const FORM_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
+const FORM_ENDPOINT = 'https://formspree.io/f/mgojqngo';
 
 const overlay = document.getElementById('intakeOverlay');
 const progressFill = document.getElementById('progressFill');
