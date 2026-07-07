@@ -444,6 +444,19 @@ img { max-width: 100%; display: block; }
 }
 .service-link:hover { gap: 10px; }
 
+.services-helper {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 15px;
+  color: rgba(245, 239, 230, 0.55);
+}
+.services-helper a {
+  color: var(--copper-lt);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.services-helper a:hover { color: var(--offwhite); }
+
 /* =============================================
    PROCESS
    ============================================= */
