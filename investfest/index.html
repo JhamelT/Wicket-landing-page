@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wicket AI at InvestFest 2026 — The Gate Audit</title>
+  <meta name="description" content="Wicket AI at InvestFest 2026, Atlanta. The Gate Audit for $250, InvestFest only. Tell us about your business and get an instant confirmation." />
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=DM+Sans:wght@400;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #2E3A52;
+      --copper: #C17F3A;
+      --offwhite: #F5EFE6;
+      --tan: #DDD5C8;
+      --navy-muted: #3D4E6B;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { -webkit-text-size-adjust: 100%; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      background: var(--navy);
+      color: var(--offwhite);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .eyebrow {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--copper);
+    }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      background: var(--navy);
+      text-align: center;
+      padding: 64px 0 56px;
+    }
+    .hero .eyebrow { display: block; margin-bottom: 32px; }
+
+    .wordmark {
+      font-family: 'Playfair Display', serif;
+      font-weight: 800;
+      font-size: 34px;
+      color: var(--offwhite);
+      line-height: 1.1;
+    }
+    .tagline {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--copper);
+      margin-top: 10px;
+      display: inline-block;
+    }
+    .tagline-rule {
+      width: 48px;
+      height: 2px;
+      background: var(--copper);
+      margin: 12px auto 0;
+    }
+
+    .hero-headline {
+      font-family: 'Playfair Display', serif;
+      font-weight: 800;
+      font-size: clamp(34px, 7vw, 52px);
+      line-height: 1.12;
+      color: var(--offwhite);
+      margin: 44px 0 18px;
+    }
+    .hero-sub {
+      font-size: 17px;
+      color: var(--tan);
+      max-width: 460px;
+      margin: 0 auto;
+    }
+
+    .hero-stat { margin-top: 48px; }
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-weight: 800;
+      font-size: clamp(64px, 14vw, 96px);
+      line-height: 1;
+      color: var(--copper);
+    }
+    .stat-caption {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--tan);
+      margin-top: 12px;
+    }
+
+    /* ---------- OFFER ---------- */
+    .offer {
+      background: var(--offwhite);
+      color: var(--navy);
+      padding: 56px 0;
+    }
+    .offer .eyebrow { display: block; margin-bottom: 16px; }
+
+    .offer-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 800;
+      font-size: clamp(26px, 5.5vw, 34px);
+      line-height: 1.2;
+      color: var(--navy);
+      display: flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .offer-price { color: var(--copper); }
+    .offer-was {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      color: var(--navy-muted);
+      text-decoration: line-through;
+    }
+
+    .offer-bullets {
+      list-style: none;
+      margin-top: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .offer-bullets li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-size: 16px;
+      color: var(--navy);
+    }
+    .offer-bullets li::before {
+      content: '';
+      flex-shrink: 0;
+      width: 8px;
+      height: 8px;
+      background: var(--copper);
+      margin-top: 8px;
+    }
+
+    /* ---------- FORM ---------- */
+    .intake {
+      background: var(--navy);
+      padding: 56px 0 64px;
+    }
+    .intake-card {
+      background: var(--offwhite);
+      color: var(--navy);
+      border-radius: 12px;
+      padding: 36px 28px 40px;
+    }
+
+    .form-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 800;
+      font-size: clamp(24px, 5vw, 30px);
+      line-height: 1.2;
+      color: var(--navy);
+    }
+    .form-subtitle {
+      font-size: 15px;
+      color: var(--navy-muted);
+      margin-top: 8px;
+      margin-bottom: 28px;
+    }
+
+    .field { margin-bottom: 20px; }
+    .field label {
+      display: block;
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    .optional {
+      font-weight: 400;
+      font-size: 13px;
+      color: var(--navy-muted);
+    }
+    .helper {
+      font-size: 13px;
+      color: var(--navy-muted);
+      margin-top: 5px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      color: var(--navy);
+      background: #FFFFFF;
+      border: 1px solid var(--tan);
+      border-radius: 8px;
+      padding: 13px 15px;
+      outline: none;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    textarea { resize: vertical; }
+    select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%233D4E6B' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 15px center;
+      padding-right: 42px;
+      cursor: pointer;
+    }
+    input::placeholder, textarea::placeholder { color: #A8A093; }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--copper);
+      box-shadow: 0 0 0 2px var(--copper);
+    }
+
+    .field-error {
+      display: none;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--copper);
+      margin-top: 6px;
+    }
+    .field.has-error .field-error { display: block; }
+    .field.has-error input,
+    .field.has-error select { border-color: var(--copper); }
+
+    .submit-btn {
+      width: 100%;
+      background: var(--copper);
+      color: #FFFFFF;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      border: none;
+      border-radius: 8px;
+      padding: 17px;
+      cursor: pointer;
+      margin-top: 8px;
+    }
+    .submit-btn:focus-visible { outline: 3px solid var(--navy); outline-offset: 2px; }
+    .submit-btn:disabled { opacity: 0.7; cursor: default; }
+
+    .submit-note {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      color: var(--navy-muted);
+      text-align: center;
+      margin-top: 14px;
+    }
+
+    .form-fail {
+      display: none;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--copper);
+      text-align: center;
+      margin-top: 16px;
+    }
+    .form-fail.visible { display: block; }
+
+    /* ---------- SUCCESS ---------- */
+    .success {
+      display: none;
+      text-align: center;
+      padding: 24px 0 8px;
+    }
+    .success.visible { display: block; }
+    .success-headline {
+      font-family: 'Playfair Display', serif;
+      font-weight: 800;
+      font-size: clamp(44px, 10vw, 64px);
+      color: var(--navy);
+    }
+    .success-line {
+      font-size: 17px;
+      color: var(--navy);
+      margin-top: 16px;
+    }
+    .success-note {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      color: var(--navy-muted);
+      margin-top: 10px;
+    }
+    .reset-btn {
+      background: none;
+      border: none;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--copper);
+      cursor: pointer;
+      margin-top: 32px;
+      padding: 8px;
+    }
+    .reset-btn:focus-visible { outline: 3px solid var(--copper); outline-offset: 2px; }
+
+    /* ---------- FOOTER ---------- */
+    .footer {
+      background: var(--navy);
+      border-top: 1px solid var(--navy-muted);
+      padding: 28px 0 36px;
+      text-align: center;
+    }
+    .footer p {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      color: var(--tan);
+      line-height: 2;
+    }
+    .footer a { color: var(--tan); text-decoration: none; }
+    .footer a:focus-visible { outline: 2px solid var(--copper); outline-offset: 2px; }
+
+    @media (min-width: 820px) {
+      .hero { padding: 88px 0 72px; }
+      .intake-card { padding: 44px 44px 48px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="wrap">
+      <span class="eyebrow">INVESTFEST 2026 &middot; ATLANTA</span>
+      <h1 class="wordmark">Wicket AI</h1>
+      <span class="tagline">The Gate to Qualified Revenue</span>
+      <div class="tagline-rule" aria-hidden="true"></div>
+      <p class="hero-headline">Manual work is leaking your revenue.</p>
+      <p class="hero-sub">Wicket AI installs revenue systems you own, built for small and local businesses.</p>
+      <div class="hero-stat">
+        <div class="stat-num">45&ndash;60</div>
+        <div class="stat-caption">Hours back. Every month.</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- OFFER -->
+  <section class="offer">
+    <div class="wrap">
+      <span class="eyebrow">INVESTFEST ONLY</span>
+      <h2 class="offer-title">
+        <span>The Gate Audit &middot; <span class="offer-price">$250</span></span>
+        <span class="offer-was">normally $350 to $500</span>
+      </h2>
+      <ul class="offer-bullets">
+        <li>Leak map of exactly where revenue drops out</li>
+        <li>Custom blueprint delivered on your follow-up call</li>
+        <li>Every dollar credited toward your build</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- INTAKE -->
+  <section class="intake">
+    <div class="wrap">
+      <div class="intake-card">
+
+        <div id="formView">
+          <h2 class="form-title">Tell us about your business.</h2>
+          <p class="form-subtitle">60 seconds. We'll show you where the gaps are.</p>
+
+          <form id="intakeForm" novalidate>
+            <div class="field" id="field-first_name">
+              <label for="first_name">First name</label>
+              <input type="text" id="first_name" name="first_name" autocomplete="given-name" autocapitalize="words" />
+              <p class="field-error">Please enter your first name.</p>
+            </div>
+
+            <div class="field" id="field-email">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" autocomplete="email" inputmode="email" autocapitalize="off" />
+              <p class="field-error">Please enter a valid email address.</p>
+            </div>
+
+            <div class="field">
+              <label for="phone">Phone <span class="optional">optional</span></label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" />
+              <p class="helper">For a faster response</p>
+            </div>
+
+            <div class="field">
+              <label for="business_name">Business name <span class="optional">optional</span></label>
+              <input type="text" id="business_name" name="business_name" autocomplete="organization" />
+            </div>
+
+            <div class="field" id="field-business_type">
+              <label for="business_type">Business type</label>
+              <select id="business_type" name="business_type">
+                <option value="" disabled selected>Select one</option>
+                <option value="Real Estate">Real Estate</option>
+                <option value="Agency or Creator">Agency or Creator</option>
+                <option value="Local Service">Local Service</option>
+                <option value="Financial Services">Financial Services</option>
+                <option value="Health and Wellness">Health and Wellness</option>
+                <option value="Other">Other</option>
+              </select>
+              <p class="field-error">Please select your business type.</p>
+            </div>
+
+            <div class="field">
+              <label for="leak">Where's your biggest leak?</label>
+              <textarea id="leak" name="leak" rows="3" placeholder="What's costing you time, money, or deals right now?"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn" id="submitBtn">Get My Confirmation</button>
+            <p class="submit-note">Instant email confirmation. That's the point.</p>
+            <p class="form-fail" id="formFail">Connection hiccup. Your info is safe, tap submit again.</p>
+          </form>
+        </div>
+
+        <div class="success" id="successView">
+          <p class="success-headline">Done.</p>
+          <p class="success-line">Check your inbox. It's already there.</p>
+          <p class="success-note">We'll reach out within 24 to 48 hours either way.</p>
+          <button type="button" class="reset-btn" id="resetBtn">+ Add another response</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="wrap">
+      <p>
+        <a href="https://wicketai.app">wicketai.app</a> &middot;
+        <a href="mailto:jhamel@wicketai.app">jhamel@wicketai.app</a><br />
+        IG @wicket_ai &middot; TIKTOK @thornejhamel
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    const WEBHOOK_URL = "PASTE_N8N_PRODUCTION_WEBHOOK_URL_HERE";
+    const PENDING_KEY = "wicket_pending_submissions";
+    const KIOSK_RESET_MS = 45000;
+
+    const form = document.getElementById('intakeForm');
+    const formView = document.getElementById('formView');
+    const successView = document.getElementById('successView');
+    const submitBtn = document.getElementById('submitBtn');
+    const formFail = document.getElementById('formFail');
+    const resetBtn = document.getElementById('resetBtn');
+
+    const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    let kioskTimer = null;
+
+    function buildPayload() {
+      return {
+        first_name: document.getElementById('first_name').value.trim(),
+        email: document.getElementById('email').value.trim(),
+        phone: document.getElementById('phone').value.trim(),
+        business_name: document.getElementById('business_name').value.trim(),
+        business_type: document.getElementById('business_type').value,
+        leak: document.getElementById('leak').value.trim(),
+        source: "investfest2026",
+        submitted_at: new Date().toISOString()
+      };
+    }
+
+    function validate() {
+      let valid = true;
+      const checks = [
+        ['field-first_name', document.getElementById('first_name').value.trim() !== ''],
+        ['field-email', EMAIL_RE.test(document.getElementById('email').value.trim())],
+        ['field-business_type', document.getElementById('business_type').value !== '']
+      ];
+      checks.forEach(([id, ok]) => {
+        const field = document.getElementById(id);
+        field.classList.toggle('has-error', !ok);
+        if (!ok) valid = false;
+      });
+      return valid;
+    }
+
+    async function postPayload(payload) {
+      const res = await fetch(WEBHOOK_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+    }
+
+    function savePending(payload) {
+      try {
+        const pending = JSON.parse(localStorage.getItem(PENDING_KEY) || '[]');
+        pending.push(payload);
+        localStorage.setItem(PENDING_KEY, JSON.stringify(pending));
+      } catch (e) { /* storage unavailable, nothing more to do */ }
+    }
+
+    function clearPendingFor(email) {
+      try {
+        const pending = JSON.parse(localStorage.getItem(PENDING_KEY) || '[]');
+        const remaining = pending.filter(p => p.email !== email);
+        if (remaining.length === 0) {
+          localStorage.removeItem(PENDING_KEY);
+        } else {
+          localStorage.setItem(PENDING_KEY, JSON.stringify(remaining));
+        }
+      } catch (e) { /* ignore */ }
+    }
+
+    async function retryPending() {
+      let pending;
+      try {
+        pending = JSON.parse(localStorage.getItem(PENDING_KEY) || '[]');
+      } catch (e) { return; }
+      if (!Array.isArray(pending) || pending.length === 0) return;
+
+      const remaining = [];
+      for (const payload of pending) {
+        try {
+          await postPayload(payload);
+        } catch (e) {
+          remaining.push(payload);
+        }
+      }
+      try {
+        if (remaining.length === 0) {
+          localStorage.removeItem(PENDING_KEY);
+        } else {
+          localStorage.setItem(PENDING_KEY, JSON.stringify(remaining));
+        }
+      } catch (e) { /* ignore */ }
+    }
+
+    function showSuccess() {
+      formView.style.display = 'none';
+      successView.classList.add('visible');
+      window.scrollTo({ top: successView.getBoundingClientRect().top + window.scrollY - 120, behavior: 'smooth' });
+      armKioskReset();
+    }
+
+    function resetForm() {
+      if (kioskTimer) { clearTimeout(kioskTimer); kioskTimer = null; }
+      form.reset();
+      formFail.classList.remove('visible');
+      document.querySelectorAll('.field.has-error').forEach(f => f.classList.remove('has-error'));
+      successView.classList.remove('visible');
+      formView.style.display = '';
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Get My Confirmation';
+    }
+
+    function armKioskReset() {
+      if (kioskTimer) clearTimeout(kioskTimer);
+      kioskTimer = setTimeout(resetForm, KIOSK_RESET_MS);
+    }
+
+    ['touchstart', 'mousedown', 'keydown'].forEach(evt => {
+      document.addEventListener(evt, () => {
+        if (successView.classList.contains('visible')) armKioskReset();
+      }, { passive: true });
+    });
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      formFail.classList.remove('visible');
+      if (!validate()) return;
+      if (submitBtn.disabled) return;
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'SENDING…';
+
+      const payload = buildPayload();
+      try {
+        await postPayload(payload);
+        clearPendingFor(payload.email);
+        showSuccess();
+      } catch (err) {
+        savePending(payload);
+        formFail.classList.add('visible');
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Get My Confirmation';
+      }
+    });
+
+    resetBtn.addEventListener('click', resetForm);
+
+    retryPending();
+  </script>
+</body>
+</html>
