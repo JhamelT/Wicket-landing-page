@@ -398,15 +398,17 @@
               <p class="field-error">Please enter a valid email address.</p>
             </div>
 
-            <div class="field">
-              <label for="phone">Phone <span class="optional">optional</span></label>
+            <div class="field" id="field-phone">
+              <label for="phone">Phone</label>
               <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" />
               <p class="helper">For a faster response</p>
+              <p class="field-error">Please enter a valid phone number.</p>
             </div>
 
-            <div class="field">
-              <label for="business_name">Business name <span class="optional">optional</span></label>
+            <div class="field" id="field-business_name">
+              <label for="business_name">Business name</label>
               <input type="text" id="business_name" name="business_name" autocomplete="organization" />
+              <p class="field-error">Please enter your business name.</p>
             </div>
 
             <div class="field" id="field-business_type">
@@ -457,7 +459,7 @@
   </footer>
 
   <script>
-    const WEBHOOK_URL = "PASTE_N8N_PRODUCTION_WEBHOOK_URL_HERE";
+    const WEBHOOK_URL = "https://wicketai.app.n8n.cloud/webhook/investfest2026";
     const PENDING_KEY = "wicket_pending_submissions";
     const KIOSK_RESET_MS = 45000;
 
@@ -469,6 +471,7 @@
     const resetBtn = document.getElementById('resetBtn');
 
     const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const PHONE_RE = /^[\d\s()+.-]{7,20}$/;
     let kioskTimer = null;
 
     function buildPayload() {
@@ -489,6 +492,8 @@
       const checks = [
         ['field-first_name', document.getElementById('first_name').value.trim() !== ''],
         ['field-email', EMAIL_RE.test(document.getElementById('email').value.trim())],
+        ['field-phone', PHONE_RE.test(document.getElementById('phone').value.trim())],
+        ['field-business_name', document.getElementById('business_name').value.trim() !== ''],
         ['field-business_type', document.getElementById('business_type').value !== '']
       ];
       checks.forEach(([id, ok]) => {
